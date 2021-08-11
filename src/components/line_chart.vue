@@ -1,12 +1,12 @@
 <template lang="pug">
-BarChart(:chartData="datas")
+LineChart(:chartData="datas")
 </template>
 <script>
 import { defineComponent } from "vue";
-import { BarChart } from "vue-chart-3";
+import { LineChart } from "vue-chart-3";
 export default defineComponent({
-  name: "bar_chart",
-  components: { BarChart },
+  name: "line_chart",
+  components: { LineChart },
   props: {
     orgData: Object,
   },
