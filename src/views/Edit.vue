@@ -1,3 +1,5 @@
 <template lang="pug">
-h1 About
+#Edit
+  el-header
+  el-main
 </template>
