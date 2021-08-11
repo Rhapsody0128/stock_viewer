@@ -10,8 +10,8 @@
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
   el-main.main
     el-row(type="flex" justify="center")
-      el-col(:lg='10' :md='14' :sm='18'  :xs='24')
-        el-carousel(:interval='3000' indicator-position="outside" height='80vh' :pauseOnHover="true")
+      el-col(:lg='10' :md='14' :sm='18' :xs='24')
+        el-carousel(:interval='3000' indicator-position="outside" height='83vh' :pauseOnHover="true")
           el-carousel-item.item
             h2 Bar Chart
             bar_chart(:orgData='barData')
@@ -20,7 +20,7 @@
             line_chart(:orgData='lineData')
           el-carousel-item.item
             h2 Table
-            el-table(:data='tableData' style='width: 100%' max-height="700")
+            el-table(:data='tableData' style='width: 100%' max-height="580")
               el-table-column(prop='PublishTime' label='時間' sortable='' width='150')
               el-table-column(prop='UVI' label='UVI指數' sortable='' width='150')
               el-table-column(prop='SiteName' label='站點' sortable='' width='150')
