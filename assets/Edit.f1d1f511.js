@@ -1,0 +1,1 @@
+import{r as a,o as e,c as r,a as n}from"./vendor.cb6a5a42.js";const o={id:"Edit"};const s={render:function(s,t){const d=a("el-header"),c=a("el-main");return e(),r("div",o,[n(d),n(c)])}};export{s as default};
