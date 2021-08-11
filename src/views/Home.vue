@@ -8,7 +8,7 @@
         el-select(v-model='SiteName' placeholder='請選擇觀測站')
           el-option-group(v-for='group in options' :key='group.label' :label='group.label')
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
-  el-main.main
+  el-main
     el-row(type="flex" justify="center")
       el-col(:lg='10' :md='14' :sm='18' :xs='24')
         el-carousel(:interval='3000' indicator-position="outside" height='83vh' :pauseOnHover="true")
