@@ -8,10 +8,10 @@
         el-select(v-model='SiteName' placeholder='請選擇觀測站')
           el-option-group(v-for='group in options' :key='group.label' :label='group.label')
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
-  el-main
+  el-main.main
     el-row(type="flex" justify="center")
       el-col(:lg='10' :md='14' :sm='18'  :xs='24')
-        el-carousel(:interval='3000' indicator-position="outside" height='83vh' :pauseOnHover="true")
+        el-carousel(:interval='3000' indicator-position="outside" height='80vh' :pauseOnHover="true")
           el-carousel-item.item
             h2 Bar Chart
             bar_chart(:orgData='barData')
@@ -20,8 +20,8 @@
             line_chart(:orgData='lineData')
           el-carousel-item.item
             h2 Table
-            el-table(:data='tableData' style='width: 100%' :max-height='1000')
-              el-table-column(prop='PublishTime' label='時間' sortable='' width='120')
+            el-table(:data='tableData' style='width: 100%' max-height="700")
+              el-table-column(prop='PublishTime' label='時間' sortable='' width='150')
               el-table-column(prop='UVI' label='UVI指數' sortable='' width='150')
               el-table-column(prop='SiteName' label='站點' sortable='' width='150')
               el-table-column(prop='County' label='縣市' sortable='' width='150')
@@ -175,8 +175,6 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-#home
-  position relative
 .item
   background rgba(255,255,255,0.95)
 </style>
