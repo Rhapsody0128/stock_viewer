@@ -1,9 +1,9 @@
 <template lang="pug">
 #Home
   el-header
+  el-main
     h1 台灣紫外線指數 {{getSiteName}}
     h2 Bar Chart
-  el-main
     el-row(type="flex" justify="center")
       el-col(:sm='24')
         h3 請選擇觀測站
@@ -12,7 +12,6 @@
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
     el-row(type="flex" justify="center")
       el-col(:lg='10' :md='14' :sm='18' :xs='24')
-
         bar_chart(:orgData='barData')
 </template>
 <script setup></script>

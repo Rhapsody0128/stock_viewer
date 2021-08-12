@@ -1,8 +1,8 @@
 <template lang="pug">
 #Home
   el-header
-    h1 台灣紫外線指數 {{getSiteName}}
   el-main
+    h1 台灣紫外線指數 {{getSiteName}}
     el-row(type="flex" justify="center")
       el-col(:sm='24')
         h3 請選擇觀測站
@@ -11,7 +11,7 @@
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
     el-row(type="flex" justify="center")
       el-col(:lg='10' :md='14' :sm='18' :xs='24')
-        el-carousel(:interval='3000' indicator-position="outside" height='83vh' :pauseOnHover="true")
+        el-carousel(:interval='3000' indicator-position="outside" height='90vh' :pauseOnHover="true")
           el-carousel-item.item
             h2 Bar Chart
             bar_chart(:orgData='barData')

@@ -1,9 +1,9 @@
 <template lang="pug">
 #Home
   el-header
+  el-main
     h1 台灣紫外線指數 {{getSiteName}}
     h2 Line Chart
-  el-main
     el-row(type="flex" justify="center")
       el-col(:sm='24')
         h3 請選擇觀測站
