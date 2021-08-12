@@ -34,8 +34,9 @@ export default {
     getOptions() {
       let options = [];
       let option = {};
-      let PublishTime = this.sortData[0].PublishTime;
+      let PublishTime = this.sortDatabyTime[0].PublishTime;
       let lastCounty = "";
+      console.log(this.sortData);
       this.sortData.map((data) => {
         if (data.PublishTime !== PublishTime) {
           return;
@@ -63,6 +64,16 @@ export default {
     sortData() {
       let sortData = this.datas.sort(function (a, b) {
         if (a.County < b.County) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+      return sortData;
+    },
+    sortDatabyTime() {
+      let sortData = this.datas.sort(function (a, b) {
+        if (a.PublishTime < b.PublishTime) {
           return 1;
         } else {
           return -1;
