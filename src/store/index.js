@@ -2,10 +2,18 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    name: "Gary",
-    Age: 27,
+    SiteName: "",
   },
-  mutations: {},
+  mutations: {
+    selectSite(state, SiteName) {
+      state.SiteName = SiteName;
+    },
+  },
+  getters: {
+    getSiteName(state) {
+      return state.SiteName;
+    },
+  },
   actions: {},
   modules: {},
 });

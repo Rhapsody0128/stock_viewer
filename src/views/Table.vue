@@ -2,6 +2,7 @@
 #Home
   el-header
     h1 台灣紫外線指數 {{getSiteName}}
+    h2 Table
   el-main
     el-row(type="flex" justify="center")
       el-col(:sm='24')
@@ -11,21 +12,12 @@
             el-option(v-for='item in group.options' :key='item.value' :label='item.label' :value='item.value')
     el-row(type="flex" justify="center")
       el-col(:lg='10' :md='14' :sm='18' :xs='24')
-        el-carousel(:interval='3000' indicator-position="outside" height='83vh' :pauseOnHover="true")
-          el-carousel-item.item
-            h2 Bar Chart
-            bar_chart(:orgData='barData')
-          el-carousel-item.item
-            h2 Line Chart
-            line_chart(:orgData='lineData')
-          el-carousel-item.item
-            h2 Table
-            el-table(:data='tableData' style='width: 100%' max-height="580")
-              el-table-column(prop='PublishTime' label='時間' sortable='' width='150')
-              el-table-column(prop='UVI' label='UVI指數' sortable='' width='150')
-              el-table-column(prop='SiteName' label='站點' sortable='' width='150')
-              el-table-column(prop='County' label='縣市' sortable='' width='150')
-              el-table-column(prop='PublishAgency' label='資訊來源' sortable='' width='150')
+        el-table(:data='tableData' style='width: 100%' max-height="580")
+          el-table-column(prop='PublishTime' label='時間' sortable='' width='150')
+          el-table-column(prop='UVI' label='UVI指數' sortable='' width='150')
+          el-table-column(prop='SiteName' label='站點' sortable='' width='150')
+          el-table-column(prop='County' label='縣市' sortable='' width='150')
+          el-table-column(prop='PublishAgency' label='資訊來源' sortable='' width='150')
 
 </template>
 <script setup></script>

@@ -7,9 +7,20 @@ const routes = [
     component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
   },
   {
-    path: "/edit",
-    name: "Edit",
-    component: () => import(/* webpackChunkName: "edit" */ "../views/Edit.vue"),
+    path: "/Bar",
+    name: "Bar",
+    component: () => import(/* webpackChunkName: "bar" */ "../views/Bar.vue"),
+  },
+  {
+    path: "/Line",
+    name: "Line",
+    component: () => import(/* webpackChunkName: "line" */ "../views/Line.vue"),
+  },
+  {
+    path: "/Table",
+    name: "Table",
+    component: () =>
+      import(/* webpackChunkName: "table" */ "../views/Table.vue"),
   },
 ];
 
