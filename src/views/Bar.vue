@@ -36,7 +36,6 @@ export default {
       let option = {};
       let PublishTime = this.sortDatabyTime[0].PublishTime;
       let lastCounty = "";
-      console.log(this.sortData);
       this.sortData.map((data) => {
         if (data.PublishTime !== PublishTime) {
           return;
