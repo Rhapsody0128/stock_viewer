@@ -115,8 +115,14 @@ export default {
       let county = "";
       let index = 0;
       this.selectData.map((data) => {
+        let UVI = 0;
+        if (parseInt(data.UVI) < 0) {
+          UVI = 0;
+        } else {
+          UVI = data.UVI;
+        }
         barData.labels.push(this.dateToString(data.PublishTime));
-        barData.datasets[0].data.push(data.UVI);
+        barData.datasets[0].data.push(UVI);
       });
       return barData;
     },
@@ -136,20 +142,32 @@ export default {
       let county = "";
       let index = 0;
       this.selectData.map((data) => {
+        let UVI = 0;
+        if (parseInt(data.UVI) < 0) {
+          UVI = 0;
+        } else {
+          UVI = data.UVI;
+        }
         barData.labels.push(this.dateToString(data.PublishTime));
-        barData.datasets[0].data.push(data.UVI);
+        barData.datasets[0].data.push(UVI);
       });
       return barData;
     },
     tableData() {
       let tableData = [];
       this.selectData.map((data) => {
+        let UVI = 0;
+        if (parseInt(data.UVI) < 0) {
+          UVI = 0;
+        } else {
+          UVI = data.UVI;
+        }
         let perData = {
           County: data.County,
           PublishAgency: data.PublishAgency,
           PublishTime: this.dateToString(data.PublishTime),
           SiteName: data.SiteName,
-          UVI: data.UVI,
+          UVI: UVI,
         };
         tableData.push(perData);
       });
